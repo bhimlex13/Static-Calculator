@@ -1,28 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Hello!</title>
-    
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css">
-    
-    <!-- import the webpage's javascript file -->
-    <script src="/script.js" defer></script>
-  </head>  
-  <body>
-    <h1>Hi there!</h1>
-    
-    <p>
-      I'm your cool new webpage. Made with <a href="https://glitch.com">Glitch</a>!
-    </p>
-
-    <!-- include the Glitch button to show what the webpage is about and
-          to make it easier for folks to view source and remix -->
-    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
-    <script src="https://button.glitch.me/button.js" defer></script>
-  </body>
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>JavaScript Document Object Model - Calculator</title>
+        <style>
+            button { width: 100%; }
+            #btn-equal { height: 46px; }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td colspan="4"><input type="text" id="txt-input-display" readonly></td>
+            </tr>
+            <tr>
+                <td><button id="btn-clear-all">CE</button></td>
+                <td><button id="btn-backspace">C</button></td>
+                <td><button id="btn-multiply">X</button></td>
+                <td><button id="btn-divide">/</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn-numbers">7</button></td>
+                <td><button class="btn-numbers">8</button></td>
+                <td><button class="btn-numbers">9</button></td>
+                <td><button id="btn-add">+</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn-numbers">4</button></td>
+                <td><button class="btn-numbers">5</button></td>
+                <td><button class="btn-numbers">6</button></td>
+                <td><button id="btn-subtract">-</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn-numbers">1</button></td>
+                <td><button class="btn-numbers">2</button></td>
+                <td><button class="btn-numbers">3</button></td>
+                <td rowspan="2"><button id="btn-equal">=</button></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button class="btn-numbers">0</button></td>
+                <td><button id="btn-decimal">.</button></td>
+            </tr>
+        </table>
+        <script src="index.js"></script>
+    </body>
 </html>
