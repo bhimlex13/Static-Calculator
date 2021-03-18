@@ -1,11 +1,11 @@
 // Create variables for the 'first operand', 'second operand', and the operation
-  // let firstOperand, secondOperand, operation;
+  let firstOperand, secondOperand, operation;
 // Create a variable and select the 'txt-input-display' element
-let txtInput = document.querySelector('#txt-input-display');
+  let txtInput = document.querySelector('#txt-input-display');
 // Create a variable and select all of the 'btn-numbers' elements
-let allBtns = document.querySelectorAll('.btn-numbers');
+  let allBtns = document.querySelectorAll('.btn-numbers');
 // Create a variable and select the 'btn-add' element   // alvin
-let btnAdd = document.querySelector('#btn-add');
+  let btnAdd = document.querySelector('#btn-add');
 
 // Create a variable and select the 'btn-subtract' element
   let btnSubtract = document.querySelector('#btn-subtract');
@@ -38,23 +38,8 @@ let btnAdd = document.querySelector('#btn-add');
 });
 
 
-let firstOperand, secondOperand, operation;
-// Create a 'click' event to add the two operands and display the result
-    btnAdd.addEventListener('click', (e) => {
-      if (operation === '+') {
-    return firstOperand + secondOperand;
-  } else if (operation === '-') {
-    return firstOperand - secondOperand;
-  } else if (operation === '*') {
-    return firstOperand * secondOperand;
-  } else if (operation === '/') {
-    return firstOperand / secondOperand;
-  }
 
-  return secondOperand;
-    });
-
-
+// Create a 'click' event to add the two operands and display the result  
    btnAdd.addEventListener('click', () => {
       let value = txtInput.value;
       if(!txtInput.value.includes("+")){
@@ -84,7 +69,7 @@ let firstOperand, secondOperand, operation;
 })
 // Create a 'click' event to clear the input display
   btnClearAll.addEventListener('click', (e) => {
-    txtInput.value = 
+    txtInput.value = null;
      
 })
 
