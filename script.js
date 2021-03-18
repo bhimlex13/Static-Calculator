@@ -40,8 +40,18 @@ let btnAdd = document.querySelector('#btn-add');
 
 let firstOperand, secondOperand, operation;
 // Create a 'click' event to add the two operands and display the result
-    btnAdd.addEventLister('click', (e) => {
-      firstOperand + secondOperand;
+    btnAdd.addEventListener('click', (e) => {
+      if (operation === '+') {
+    return firstOperand + secondOperand;
+  } else if (operation === '-') {
+    return firstOperand - secondOperand;
+  } else if (operation === '*') {
+    return firstOperand * secondOperand;
+  } else if (operation === '/') {
+    return firstOperand / secondOperand;
+  }
+
+  return secondOperand;
     });
 // Create a 'click' event to subtract the two operands and display the result
     btnSubtract.addEventListener('click', (e) => {
