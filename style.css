@@ -9,3 +9,11 @@ h1 {
   font-style: italic;
   color: #373fff;
 }
+
+button {
+  width: 100%;
+}
+
+#btn-equal {
+  height: 46px;
+}
