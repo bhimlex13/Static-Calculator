@@ -26,11 +26,12 @@
 
 
 // Add an 'click' event listener to all of the 'btn-numbers' by traversing them by 'forEach' statement
-
+ // the 'onclick' event should retrieve 'textContent' property of the current button
+    // and append it to the current value of 'txt-input-display'
+  
   allBtns.forEach( btn => {
    // console.log(btn.textContent);
-    // the 'onclick' event should retrieve 'textContent' property of the current button
-    // and append it to the current value of 'txt-input-display'
+   
     btn.addEventListener('click', (e) => {
         let value = txtInput.value;
         txtInput.value += btn.textContent;  
