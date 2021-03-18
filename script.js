@@ -30,17 +30,23 @@ let btnAdd = document.querySelector('#btn-add');
 // and append it to the current value of 'txt-input-display'
   allBtns.forEach( btn => {
    // console.log(btn.textContent);
-    let textInput = document.querySelector('#txt-input-display');
+    
     
     
     btn.addEventListener('click', (e) => {
-     txtInput.();
+     // txtInput.value.append(btn.textContent);
+          console.dir(e.target.innerText);
+    let textContent = document.createTextNode(e.target.innerText)
+    txtInput.appendChild(textContent);
+      
+     //console.log('clicked')
+      //console.dir(txtInput)
    }) 
 });
 
 
 // Create a 'click' event to add the two operands and display the result
-
+    
 // Create a 'click' event to subtract the two operands and display the result
 
 // Create a 'click' event to multiply the two operands and display the result
