@@ -29,7 +29,13 @@ let btnAdd = document.querySelector('#btn-add');
 // the 'onclick' event should retrieve 'textContent' property of the current button
 // and append it to the current value of 'txt-input-display'
   allBtns.forEach( btn => {
-   console.log(btn.textContent);
+   // console.log(btn.textContent);
+    let textInput = document.querySelector('#txt-input-display');
+    
+    
+    btn.addEventListener('click', (e) => {
+     txtInput.();
+   }) 
 });
 
 
