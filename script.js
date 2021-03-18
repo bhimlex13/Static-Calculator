@@ -1,5 +1,5 @@
 // Create variables for the 'first operand', 'second operand', and the operation
-  let firstOperand, secondOperand, operation;
+  // let firstOperand, secondOperand, operation;
 // Create a variable and select the 'txt-input-display' element
 let txtInput = document.querySelector('#txt-input-display');
 // Create a variable and select all of the 'btn-numbers' elements
@@ -38,18 +38,30 @@ let btnAdd = document.querySelector('#btn-add');
 });
 
 
+let firstOperand, secondOperand, operation;
 // Create a 'click' event to add the two operands and display the result
-    
+    btnAdd.addEventLister('click', (e) => {
+      firstOperand + secondOperand;
+    });
 // Create a 'click' event to subtract the two operands and display the result
-
+    btnSubtract.addEventListener('click', (e) => {
+      console.log('clicked');
+    })
 // Create a 'click' event to multiply the two operands and display the result
-
+    
 // Create a 'click' event to divide the two operands and display the result
 
 // Create a 'click' event to clear the input display
-
+  btnClearAll.addEventListener('click', (e) => {
+    txtInput.value = ""
+     
+})
 // Create a 'click' event to delete the last number from the operand
-
+btnBackspace.addEventListener('click', (e) => {
+    //let value = txtInput.value;
+    txtInput.value = txtInput.value.toString().slice(0, -1)
+     
+}) 
 // Create a 'click' event to append a decimal character to the operand
 
 // css is optional
