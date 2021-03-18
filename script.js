@@ -14,7 +14,7 @@ let btnAdd = document.querySelector('#btn-add');
 // Create a variable and select the 'btn-divide' element
   let btnDivide = document.querySelector('#btn-divide');
 // Create a variable and select the 'btn-equal' element /alex
-  let btnEqual = document.querySelector('btn-equal');
+  let btnEqual = document.querySelector('#btn-equal');
 
 
 // Create a variable and select the 'btn-decimal' element // 
@@ -53,19 +53,47 @@ let firstOperand, secondOperand, operation;
 
   return secondOperand;
     });
-// Create a 'click' event to subtract the two operands and display the result
-    btnSubtract.addEventListener('click', (e) => {
-      console.log('clicked');
-    })
-// Create a 'click' event to multiply the two operands and display the result
-    
-// Create a 'click' event to divide the two operands and display the result
 
+
+   btnAdd.addEventListener('click', () => {
+      let value = txtInput.value;
+      if(!txtInput.value.includes("+")){
+          txtInput.value += "+";
+    }
+})
+// Create a 'click' event to subtract the two operands and display the result
+    btnSubtract.addEventListener('click', () => {
+      let value = txtInput.value;
+      if(!txtInput.value.includes("-")){
+          txtInput.value += "-";
+    }
+})
+// Create a 'click' event to multiply the two operands and display the result
+      btnMultiply.addEventListener('click', () => {
+        let value = txtInput.value;
+        if(!txtInput.value.includes("*")){
+            txtInput.value += "*";
+    }
+})
+// Create a 'click' event to divide the two operands and display the result
+   btnDivide.addEventListener('click', () => {
+      let value = txtInput.value;
+      if(!txtInput.value.includes("/")){
+          txtInput.value += "/";
+      }
+})
 // Create a 'click' event to clear the input display
   btnClearAll.addEventListener('click', (e) => {
-    txtInput.value = ""
+    txtInput.value = 
      
 })
+
+// equal sign
+  btnEqual.addEventListener('click', () => {
+    let result = eval(txtInput.value);
+    txtInput.value = result;
+})
+
 // Create a 'click' event to delete the last number from the operand
 btnBackspace.addEventListener('click', (e) => {
     //let value = txtInput.value;
@@ -73,5 +101,12 @@ btnBackspace.addEventListener('click', (e) => {
      
 }) 
 // Create a 'click' event to append a decimal character to the operand
+  btnDecimal .addEventListener('click', () => {
+      let value = txtInput.value;
+      // if(!txtInput.value.includes(".")){
+          txtInput.value += ".";
+      // }
+})
+
 
 // css is optional
