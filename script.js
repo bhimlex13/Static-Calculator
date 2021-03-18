@@ -38,8 +38,7 @@ allBtns.forEach(btn => {
 		
 	})
 })
- // the 'onclick' event should retrieve 'textContent' property of the current button
-    // and append it to the current value of 'txt-input-display'
+
 
 // Create a 'click' event to add the two operands and display the result  
 btnAdd.addEventListener('click', () => {
@@ -49,6 +48,8 @@ btnAdd.addEventListener('click', () => {
 	}
 
 })
+
+
 // Create a 'click' event to subtract the two operands and display the result
    btnSubtract.addEventListener('click', () => {
   	let splitted = txtInput.value.split('');
@@ -56,6 +57,8 @@ btnAdd.addEventListener('click', () => {
 					txtInput.value += "-";	
 	}
 })
+
+
 // Create a 'click' event to multiply the two operands and display the result
       btnMultiply.addEventListener('click', () => {
       	let splitted = txtInput.value.split('');
@@ -63,6 +66,8 @@ btnAdd.addEventListener('click', () => {
 					txtInput.value += "*";	
 	}
 })
+
+
 // Create a 'click' event to divide the two operands and display the result
    btnDivide.addEventListener('click', () => {
    	let splitted = txtInput.value.split('');
@@ -70,34 +75,39 @@ btnAdd.addEventListener('click', () => {
 					txtInput.value += "/";	
 	}
 })
+
+
 // Create a 'click' event to clear the input display
   btnClearAll.addEventListener('click', (e) => {
     txtInput.value = "";
-     
 })
+
+
 // equal sign
   btnEqual.addEventListener('click', () => {
   	let splitted = txtInput.value.split('');
    
-    if(!isNaN(splitted[splitted.length - 1])){
+    if(!isNaN(splitted[splitted.length - 1] )){
     	 let result = eval(txtInput.value);
     	     txtInput.value = result;
-    }
-    
+    }  
 })
+
+
 // Create a 'click' event to delete the last number from the operand
 btnBackspace.addEventListener('click', () => {
     //let value = txtInput.value;
     txtInput.value = txtInput.value.toString().slice(0, -1)
      
 }) 
+
+
 // Create a 'click' event to append a decimal character to the operand
   btnDecimal .addEventListener('click', () => {
    	let splitted = txtInput.value.split('');
    	if(splitted[splitted.length - 1] !== "." && !isNaN(splitted[splitted.length - 1])){
 					txtInput.value += ".";	
 	}
-     
 })
 
 // css is optional
