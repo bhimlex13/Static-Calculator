@@ -87,7 +87,7 @@ btnAdd.addEventListener('click', () => {
   btnEqual.addEventListener('click', () => {
   	let splitted = txtInput.value.split('');
    
-    if(!isNaN(splitted[splitted.length - 1] )){
+    if(!isNaN(splitted[splitted.length - 1])){
     	 let result = eval(txtInput.value);
     	     txtInput.value = result;
     }  
