@@ -33,7 +33,7 @@
 allBtns.forEach(btn => {
 	console.log(btn.textContent);
 
-	btn.addEventListener('click', () => {
+	btn.addEventListener('click', (e) => {
 		txtInput.value += btn.textContent; 
 		
 	})
